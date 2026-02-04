@@ -18,31 +18,27 @@ Environment-based configuration
 Designed for real-world CI/CD usage
 
 🏗️ Framework Architecture
-.
-├── core/
-│   ├── base_page.py
-│   ├── logging_utils.py
-│   └── playwright_factory.py
-│
-├── page_objects/
-│   ├── login_page.py
-│   └── dashboard_page.py
-│
-├── integrations/
-│   └── jira_client.py
-│
-├── tests/
-│   ├── conftest.py
-│   ├── test_login.py
-│   └── test_dashboard.py
-│
-├── test_run_logs/
-│   └── test_run.log
-│
-├── allure-results/
-├── pytest.ini
-├── requirements.txt
-└── README.md
+
+```text
+allure-report/                     
+allure-results/                  
+core/
+├── logging_utils.py 
+integrations/ 
+├── jira_client.py                   
+page_objects/             
+screenshots/                
+test_run_logs/               
+tests/                    
+├── conftest.py   
+├── test_scenarios.py    
+pytest.ini
+requirements.txt
+test.env
+```
+
+
+
 
 📐 Design Patterns & Practices
 Page Object Model (Composition-Based)
