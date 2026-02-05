@@ -45,7 +45,7 @@ def test_login_args(page):
     inventory_page = InventoryPage(page)
     inventory_page_title = inventory_page.get_page_title()
     try:
-        assert 'Products' in inventory_page_title, 'Assertion error: "Products" not in inventory page title'
+        assert 'Inventory' in inventory_page_title, 'Assertion error: "Products" not in inventory page title'
         logger_utility().info('"Products" text found in inventory page title. Test passed')
     except AssertionError:
         logger_utility().error('Assertion error: "Products" not in inventory page title')

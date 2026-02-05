@@ -25,7 +25,7 @@ allure-results/
 core/
 ├── logging_utils.py 
 integrations/ 
-├── jira_client.py                   
+├── jira_client.py          calls to JIRA REST API         
 page_objects/             
 screenshots/                
 test_run_logs/               
@@ -119,7 +119,8 @@ Automatically creates Bug issues on test failure
 
 Uses Atlassian Document Format (ADF) for descriptions
 
-Environment Variables Required
+Environment Variables Required:
+
 JIRA_URL=https://your-domain.atlassian.net
 JIRA_EMAIL=your-email@example.com
 JIRA_API_TOKEN=your_api_token

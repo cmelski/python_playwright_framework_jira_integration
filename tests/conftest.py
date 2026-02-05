@@ -98,8 +98,8 @@ def pytest_runtest_makereport(item, call):
     # Create Jira issue if enabled
     # --------------------
     if os.getenv("CREATE_JIRA_ON_FAILURE") == "true":
-        #test_name = item.nodeid
-        test_name = 'jira test'
+        test_name = item.nodeid
+        #test_name = 'jira test'
         error = str(report.longrepr)
         try:
             issue_key = get_or_create_issue(test_name, error)
