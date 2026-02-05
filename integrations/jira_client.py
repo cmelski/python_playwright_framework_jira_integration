@@ -60,7 +60,7 @@ def find_existing_issue(test_name):
 # --------------------------
 # CREATE NEW ISSUE
 # --------------------------
-def create_issue(test_name, error):
+def create_issue(test_name, error, jira_project):
     """
     Create a new Jira bug issue with test name and error.
     Returns the new issue key.
@@ -68,7 +68,7 @@ def create_issue(test_name, error):
     url = f"{JIRA_URL}/rest/api/3/issue"
 
     payload = {"fields": {"project": {
-        "key": "SCRUM"
+        "key": f"{jira_project}"
     },
         "summary": f"Test failure: {test_name}",
         "description": {
@@ -100,11 +100,11 @@ def create_issue(test_name, error):
 # --------------------------
 # GET OR CREATE ISSUE
 # --------------------------
-def get_or_create_issue(test_name, error):
+def get_or_create_issue(test_name, error, jira_project):
     """
     Returns existing issue key if found, otherwise creates a new issue.
     """
     existing = find_existing_issue(test_name)
     if existing:
         return existing
-    return create_issue(test_name, error)
+    return create_issue(test_name, error, jira_project)

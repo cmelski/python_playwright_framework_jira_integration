@@ -101,8 +101,9 @@ def pytest_runtest_makereport(item, call):
         test_name = item.nodeid
         #test_name = 'jira test'
         error = str(report.longrepr)
+        jira_project = os.environ.get('JIRA_PROJECT')
         try:
-            issue_key = get_or_create_issue(test_name, error)
+            issue_key = get_or_create_issue(test_name, error, jira_project)
             if issue_key:
                 logger_utility().info(f"Issue key: {issue_key}")
                 print(f"Issue key: {issue_key}")

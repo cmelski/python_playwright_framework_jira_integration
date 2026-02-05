@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/python_fundamentals.iml" filepath="$PROJECT_DIR$/.idea/python_fundamentals.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/python_playwright_automation_jira_integration.iml" filepath="$PROJECT_DIR$/.idea/python_playwright_automation_jira_integration.iml" />
     </modules>
   </component>
 </project>

@@ -71,7 +71,7 @@ def test_invalid_login(page, invalid_login_credentials):
     password = invalid_login_credentials[2]
     login.click_login(username, password)
     try:
-        expect(page.locator('[data-test="error"]')).to_be_visible()
+        expect(page.locator('[data-test="errors"]')).to_be_visible()
         logger_utility().info(f'Error message shown. Login failed for {scenario} scenario.'
                               f' "{username}"/"{password}". Test passed')
     except AssertionError:
